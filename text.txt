@@ -1,0 +1,20 @@
+arm:
+camera:Camera-new.c
+	arm-linux-gnueabihf-gcc -o Camera Camera-new.c -L /home/twk123/lib/arm/jpegsrc/lib -ljpeg -L /home/twk123/lib/arm/tslibsrc/lib -lts -lpthread
+clean:
+	rm -f Camera
+
+const char *background1 = "/root/background/background1.jpg";
+const char *background2 = "/root/background/background2.jpg";
+
+
+x86:
+camera:Camera-new.c
+	gcc -g -o Camera Camera-new.c  -ljpeg -lts -lpthread
+clean:
+	rm -f Camera
+
+const char *background1 = "/home/twk123/linux-simple-camera/background/background1.jpg";
+const char *background2 = "/home/twk123/linux-simple-camera/background/background2.jpg";
+
+mount -t nfs -o nolock,vers=3 192.168.0.200:/home/twk123/nfs /mnt
