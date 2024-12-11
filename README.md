@@ -1,20 +1,18 @@
-# 嵌入式Linux简易相机
+# Linux simple camera
 
-#### 项目功能
-基于V4L2架构驱动外置USB摄像头实现拍照和查看相册的功能
+#### Function
+Drive an external USB camera based on V4L2 architecture to achieve the functions of taking photos and viewing albums
 
-#### 所需硬件
-韦东山的老师的IMX6ULL的开发板以及外置USB摄像头，当然其它Linux板子理论上也可以。
 
-#### 涉及技术
+#### Involving technology
 
-这个项目主要涉及Linux的V4L2框架的应用，主要是为了获取摄像头的数据，JPEG开源库的应用，为了将获取到的图像数据从JPEG转化为RGB格式在LCD上显示，TSLib库实现触摸屏的触摸操作，多线程操作以及双向链表方式对照片进行存储。
+This project mainly involves the application of the V4L2 framework in Linux, mainly to obtain camera data. The application of the JPEG open source library is used to convert the obtained image data from JPEG to RGB format for display on LCD. The TSLib library implements touch operations on the touch screen, multi-threaded operations, and bidirectional linked list storage for photos.
 
-#### 注意事项
+#### Note
 
-1.  替换uvc驱动
-2.  需要自己移植JPEG库以及对应板子的交叉编译链
-3.  背景图片我放在文件夹了，对应代码中的background1.jpg和background2.jpg
+1. Replace the UVC driver
+2. It is necessary to transplant the JPEG library and the corresponding cross compilation chain of the board by oneself
+3. The background image corresponds to background1.jpg and background2.jpg in the code
 
 
 
